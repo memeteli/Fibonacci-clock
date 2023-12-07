@@ -11,6 +11,7 @@ form {
 
   margin-top: 5%;
 }
+
 /* Flexs */
 .Flex-Column {
   display: flex;
@@ -27,6 +28,7 @@ form {
   align-items: center;
   justify-content: space-around;
 }
+
 /* Containers */
 .ClockContainer {
   margin: auto;

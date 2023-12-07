@@ -42,7 +42,7 @@ function App() {
     //HERE IS THE FUNCTION FOR CALCULATION  
     for (let i = 0; i < fibonacciCubes.length; i++) {
 
-      //for blue cube
+      //Add logic for blue cube
 
       if (hourArray?.includes(fibonacciCubes[i])) {
         applyBackgroundColor(fibonacciCubes[i], "red");
@@ -100,6 +100,10 @@ function App() {
       element[0].style.backgroundColor = backgroundColor;
     } else if (value === '') {
       element = document.getElementsByClassName('Cube-1');
+      if (element[0] === element[1]) {
+        element[0].style.backgroundColor = backgroundColor;
+        element[1].style.backgroundColor = backgroundColor;
+      }
       element[0].style.backgroundColor = backgroundColor;
     }
   }
