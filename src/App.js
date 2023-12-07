@@ -10,14 +10,12 @@ function App() {
   const MINUTE_MS = 1000; // 5 Minute
 
   useEffect(() => {
-    console.log('setInterval before')
     const interval = setInterval(() => {
       setCurrentTime(new Date().toLocaleTimeString())
-    }, MINUTE_MS);
-    console.log('the current time', interval);
+    }, 1000);
 
     return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  }, [])
+  }, [MINUTE_MS])
 
   const handleHourChange = (e) => {
     setHour(e.target.value)
@@ -44,7 +42,7 @@ function App() {
     //HERE IS THE FUNCTION FOR CALCULATION  
     for (let i = 0; i < fibonacciCubes.length; i++) {
 
-      //for blue cube 
+      //for blue cube
 
       if (hourArray?.includes(fibonacciCubes[i])) {
         applyBackgroundColor(fibonacciCubes[i], "red");
